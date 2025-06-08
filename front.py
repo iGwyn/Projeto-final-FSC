@@ -72,7 +72,19 @@ def menu_usuario(login):
             descricao = input("Descrição da tarefa: ")
             print("Dificuldade: 1 (Fácil), 2 (Média), 3 (Difícil)")
             dificuldade = input("Escolha a dificuldade: ")
-            data_limite = input("Data limite (dd/mm/aaaa): ")
+            
+            data_limite = " "
+            valido = False
+                
+            while not valido:
+                data_limite = input("Digite a data limite para finalizar a tarefa (dd/mm/aaaa): ")
+                    
+                try:
+                    datetime.strptime(data_limite, "%d/%m/%Y")
+                    valido = True
+                except ValueError:
+                    print("Formato de data inválido")
+            
             if adicionar_tarefa(login, descricao, dificuldade, data_limite):
                 print("Tarefa adicionada com sucesso.")
             else:
