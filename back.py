@@ -120,6 +120,9 @@ def marcar_concluida(login, posicao):
     tarefas = dados[login]["tarefas"]
     
     if 0 <= posicao < len(tarefas):
+        if tarefas[posicao]["concluida"] == True:
+            return False
+        
         tarefas[posicao]["concluida"] = True
         pontos = tarefas[posicao].get("valor", 0)
         dados[login]["pontos"] = dados[login].get("pontos", 0) + pontos

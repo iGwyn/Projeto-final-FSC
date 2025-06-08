@@ -4,7 +4,7 @@
     "tarefas": [
       {
         "descricao": "Upar esse c\u00f3digo no git",
-        "concluida": false,
+        "concluida": true,
         "dificuldade": "1",
         "valor": 5,
         "criada_em": "08/06/2025",
@@ -17,8 +17,16 @@
         "valor": 10,
         "criada_em": "08/06/2025",
         "data_limite": "08/06/2025"
+      },
+      {
+        "descricao": "Apresentar esse projeto",
+        "concluida": false,
+        "dificuldade": "3",
+        "valor": 20,
+        "criada_em": "08/06/2025",
+        "data_limite": "09/06/2025"
       }
     ],
-    "pontos": 30
+    "pontos": 125
   }
 }

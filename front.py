@@ -97,19 +97,21 @@ def menu_usuario(login):
             else:
                 for i, tarefa in enumerate(tarefas):
                     status = "✅ Concluída" if tarefa["concluida"] else "⏳ Pendente"
-                    print(f"{i}. {tarefa['descricao']} | {status} | Dificuldade: {tarefa['dificuldade']} | Valor: {tarefa['valor']} pts | Limite: {tarefa['data_limite']}")
+                    print(f"{i + 1}. {tarefa['descricao']} | {status} | Dificuldade: {tarefa['dificuldade']} | Valor: {tarefa['valor']} pts | Limite: {tarefa['data_limite']}")
             input("Pressione Enter para continuar...")
 
         elif opcao == "3":
-            posicao = int(input("Digite o número da tarefa a marcar como concluída: "))
+            posicao = int(input("Digite o número da tarefa a marcar como concluída: ")) - 1
             if marcar_concluida(login, posicao):
                 print("Tarefa marcada como concluída.")
+            elif marcar_concluida(login, posicao) == False:
+                print("Tarefa já foi marcada como concluida")
             else:
                 print("Tarefa não encontrada.")
             input("Pressione Enter para continuar...")
 
         elif opcao == "4":
-            posicao = int(input("Digite o número da tarefa a excluir: "))
+            posicao = int(input("Digite o número da tarefa a excluir: ")) - 1
             if excluir_tarefa(login, posicao):
                 print("Tarefa excluída com sucesso.")
             else:
