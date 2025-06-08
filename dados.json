@@ -1,0 +1,24 @@
+{
+  "Projeto": {
+    "senha": "Final",
+    "tarefas": [
+      {
+        "descricao": "Upar esse c\u00f3digo no git",
+        "concluida": false,
+        "dificuldade": "1",
+        "valor": 5,
+        "criada_em": "08/06/2025",
+        "data_limite": "09/06/2025"
+      },
+      {
+        "descricao": "Testar esse c\u00f3digo",
+        "concluida": true,
+        "dificuldade": "2",
+        "valor": 10,
+        "criada_em": "08/06/2025",
+        "data_limite": "08/06/2025"
+      }
+    ],
+    "pontos": 30
+  }
+}
